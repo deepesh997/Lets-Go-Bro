@@ -233,7 +233,8 @@ export const api = {
     
     if (isSheetConfigured || !isApiConfigured()) {
       const list = isSheetConfigured ? await fetchProductsFromApi() : mockProducts;
-      return list.filter((p) => p.status === 'Active').slice(0, 4);
+      const activeList = list.filter((p) => p.status === 'Active');
+      return isSheetConfigured ? activeList.slice(0, 8) : activeList.slice(0, 4);
     }
     return fetchWithRetry(getFullUrl('/featured-products'));
   },
@@ -243,7 +244,8 @@ export const api = {
     
     if (isSheetConfigured || !isApiConfigured()) {
       const list = isSheetConfigured ? await fetchProductsFromApi() : mockProducts;
-      return list.filter((p) => p.status === 'Active').slice(2, 6);
+      const activeList = list.filter((p) => p.status === 'Active');
+      return isSheetConfigured ? activeList.slice(0, 8) : activeList.slice(2, 6);
     }
     return fetchWithRetry(getFullUrl('/trending-products'));
   },
@@ -253,7 +255,8 @@ export const api = {
     
     if (isSheetConfigured || !isApiConfigured()) {
       const list = isSheetConfigured ? await fetchProductsFromApi() : mockProducts;
-      return list.filter((p) => p.status === 'Active').slice(0, 4);
+      const activeList = list.filter((p) => p.status === 'Active');
+      return isSheetConfigured ? activeList.slice(0, 8) : activeList.slice(0, 4);
     }
     return fetchWithRetry(getFullUrl('/deals'));
   },
