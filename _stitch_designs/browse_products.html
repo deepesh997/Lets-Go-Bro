@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AffiliatePro | Discover Best Deals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .product-card-shadow {
+            box-shadow: 0px 1px 3px rgba(15, 23, 42, 0.08), 0px 10px 15px -3px rgba(15, 23, 42, 0.05);
+        }
+        .glass-header {
+            backdrop-filter: blur(8px);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#dae2fd",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "tertiary": "#943700",
+                      "on-secondary-container": "#5c647a",
+                      "secondary": "#565e74",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "surface-container-high": "#e7e7f3",
+                      "primary": "#004ac6",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#bc4800",
+                      "outline-variant": "#c3c6d7",
+                      "on-error-container": "#93000a",
+                      "on-error": "#ffffff",
+                      "on-surface": "#191b23",
+                      "surface-container": "#ededf9",
+                      "on-background": "#191b23",
+                      "surface-container-low": "#f3f3fe",
+                      "on-tertiary-fixed": "#360f00",
+                      "primary-container": "#2563eb",
+                      "secondary-fixed": "#dae2fd",
+                      "surface-container-highest": "#e1e2ed",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "outline": "#737686",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-variant": "#e1e2ed",
+                      "on-secondary-fixed": "#131b2e",
+                      "background": "#faf8ff",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#d9d9e5",
+                      "on-tertiary-container": "#ffede6",
+                      "inverse-on-surface": "#f0f0fb",
+                      "on-primary-fixed": "#00174b",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "inverse-primary": "#b4c5ff",
+                      "on-surface-variant": "#434655",
+                      "on-primary-container": "#eeefff",
+                      "surface-bright": "#faf8ff",
+                      "surface-tint": "#0053db",
+                      "primary-fixed": "#dbe1ff",
+                      "inverse-surface": "#2e3039",
+                      "surface": "#faf8ff",
+                      "tertiary-fixed": "#ffdbcd"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit-xs": "4px",
+                      "gutter": "24px",
+                      "unit-xl": "48px",
+                      "unit-sm": "8px",
+                      "unit-md": "16px",
+                      "margin-mobile": "16px",
+                      "unit-lg": "24px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "h1-mobile": ["Plus Jakarta Sans"],
+                      "body-md": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "h1": ["Plus Jakarta Sans"],
+                      "h2": ["Plus Jakarta Sans"],
+                      "code": ["Inter"],
+                      "h3": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "h1-mobile": ["30px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "code": ["13px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-unit-xl">
+<div class="flex items-center gap-unit-md">
+<span class="text-h3 font-h3 font-bold text-primary dark:text-primary-fixed-dim">AffiliatePro</span>
+</div>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex gap-unit-lg items-center">
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Deals</a>
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Trending</a>
+<a class="text-label-md font-label-md text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1" href="#">Categories</a>
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Blog</a>
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">About</a>
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-unit-sm">
+<div class="hidden md:flex items-center relative">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span>
+<input class="h-[40px] pl-10 pr-4 rounded-xl border border-outline-variant bg-surface-container-low focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none text-body-sm w-64" placeholder="Search products..." type="text"/>
+</div>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-all">dark_mode</button>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-all md:hidden">menu</button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto flex gap-gutter min-h-screen relative px-margin-mobile lg:px-gutter py-unit-lg lg:py-unit-xl">
+<!-- SideNavBar Filters (Desktop) -->
+<aside class="hidden lg:flex flex-col p-unit-md gap-unit-sm fixed left-0 top-unit-xl w-[260px] h-[calc(100vh-80px)] overflow-y-auto bg-surface dark:bg-surface-dim border-r border-outline-variant dark:border-outline flat no shadows">
+<div class="mb-unit-md">
+<h3 class="text-label-md font-label-md text-primary font-bold">Filters</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Refine Discovery</p>
+</div>
+<div class="flex flex-col gap-unit-xs">
+<!-- Category -->
+<button class="bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary font-bold rounded-lg flex items-center gap-3 px-3 py-2.5 scale-[0.98] duration-150">
+<span class="material-symbols-outlined text-[20px]">category</span>
+<span class="text-label-md font-label-md">Category</span>
+</button>
+<!-- Price -->
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-inverse-surface rounded-lg flex items-center gap-3 px-3 py-2.5 transition-all">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+<span class="text-label-md font-label-md">Price</span>
+</button>
+<!-- Brand -->
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-inverse-surface rounded-lg flex items-center gap-3 px-3 py-2.5 transition-all">
+<span class="material-symbols-outlined text-[20px]">factory</span>
+<span class="text-label-md font-label-md">Brand</span>
+</button>
+<!-- Ratings -->
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-inverse-surface rounded-lg flex items-center gap-3 px-3 py-2.5 transition-all">
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="text-label-md font-label-md">Ratings</span>
+</button>
+<!-- Stock -->
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-inverse-surface rounded-lg flex items-center gap-3 px-3 py-2.5 transition-all">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+<span class="text-label-md font-label-md">Stock</span>
+</button>
+<!-- Marketplace -->
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-inverse-surface rounded-lg flex items-center gap-3 px-3 py-2.5 transition-all">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+<span class="text-label-md font-label-md">Marketplace</span>
+</button>
+<!-- Discount -->
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-inverse-surface rounded-lg flex items-center gap-3 px-3 py-2.5 transition-all">
+<span class="material-symbols-outlined text-[20px]">percent</span>
+<span class="text-label-md font-label-md">Discount</span>
+</button>
+</div>
+<!-- Ad Placeholder in Sidebar -->
+<div class="mt-unit-xl p-unit-md bg-surface-container-low rounded-xl border-2 border-dashed border-outline-variant flex flex-col items-center justify-center text-center">
+<span class="font-code text-code text-outline uppercase tracking-wider">Premium Listing</span>
+<p class="text-[11px] text-outline mt-2 italic">Upgrade to Featured</p>
+</div>
+</aside>
+<!-- Main Content Area -->
+<section class="flex-1 lg:ml-[280px]">
+<!-- Controls Bar -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-unit-md mb-unit-lg bg-surface-container-lowest p-unit-md rounded-xl shadow-sm border border-outline-variant/50">
+<div>
+<h1 class="font-h3 text-h3 text-on-surface">Browse All Products</h1>
+<p class="text-body-sm text-on-surface-variant">Showing 1,240 verified affiliate opportunities</p>
+</div>
+<div class="flex items-center gap-unit-sm w-full md:w-auto">
+<!-- Sort -->
+<div class="relative flex-1 md:flex-none">
+<select class="w-full appearance-none bg-white border border-outline-variant rounded-xl px-4 py-2 text-body-sm font-medium focus:ring-2 focus:ring-primary/20 outline-none pr-10">
+<option>Latest Arrivals</option>
+<option>Most Popular</option>
+<option>Highest Discount</option>
+<option>EPC: High to Low</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- View Toggles -->
+<div class="flex p-1 bg-surface-container rounded-xl border border-outline-variant/30">
+<button class="p-1.5 rounded-lg bg-white shadow-sm text-primary material-symbols-outlined">grid_view</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant material-symbols-outlined hover:bg-white/50">view_list</button>
+</div>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-unit-lg">
+<!-- Product Card 1 -->
+<div class="product-card-shadow bg-white rounded-xl border border-outline-variant flex flex-col group overflow-hidden hover:translate-y-[-4px] transition-all duration-300">
+<div class="aspect-square bg-surface-container-low relative overflow-hidden">
+<img alt="Nike Air Max" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professional studio product photograph of a sleek, modern red sports sneaker with high-performance cushioning. The background is a clean, minimalist light-gray gradient that emphasizes the sneaker's bold color and sharp lines. The lighting is soft and even, highlighting the technical mesh fabric and durable rubber sole textures. The overall mood is athletic and energetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTENKevO7Ccnr1Hy-96s4SHKQfgCfG6dAHxSugvIJQ3NBJ4X2RaOkHWZ9zt3-EBHOXaD5xQfQrMKSQxtjf2mv_Ah7KqxqlIb-FyqlZS9PjPdqYZRChH4iWlLdc1FWxWmZDmcvWG2iIP3lWgS_wmSgnWl9_o8iMDsKVGL7ZElfYUzqCCZqp5tg8PJhbYd85abs3CsKZMtpFYu7xwJ1CLrsuVyH7crXzxw9lqOTRyIVAppxYz9ddl8VOHnJ3uKJ_f0IuOexKgAycbJc"/>
+<span class="absolute top-3 left-3 bg-primary text-on-primary text-[11px] font-bold px-2 py-1 rounded-full">30% OFF</span>
+<button class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-unit-md flex flex-col gap-unit-sm">
+<div class="flex justify-between items-start">
+<span class="text-code font-code text-primary uppercase text-[10px] tracking-widest">Footwear</span>
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-body-sm font-bold ml-1">4.9</span>
+</div>
+</div>
+<h3 class="text-label-md font-bold text-on-surface line-clamp-1">Nike Air Max Performance</h3>
+<div class="flex items-baseline gap-2">
+<span class="text-h3 font-bold text-on-surface">$120.00</span>
+<span class="text-body-sm text-outline line-through">$180.00</span>
+</div>
+<!-- Stats Row -->
+<div class="flex items-center gap-unit-sm mt-1">
+<div class="bg-secondary-container/30 px-2 py-1 rounded-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">percent</span>
+<span class="text-code font-bold text-primary">12% Comm.</span>
+</div>
+<div class="bg-surface-container px-2 py-1 rounded-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">ads_click</span>
+<span class="text-code font-bold text-on-surface-variant">$2.40 EPC</span>
+</div>
+</div>
+<button class="mt-unit-sm w-full bg-primary hover:bg-primary-container text-on-primary py-2.5 rounded-xl font-bold transition-all shadow-md active:scale-95">Get Deal Link</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="product-card-shadow bg-white rounded-xl border border-outline-variant flex flex-col group overflow-hidden hover:translate-y-[-4px] transition-all duration-300">
+<div class="aspect-square bg-surface-container-low relative overflow-hidden">
+<img alt="Luxury Watch" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A luxurious, close-up shot of a minimalist silver wristwatch with a white face and a light brown leather strap. The watch is presented on a textured marble surface, illuminated by natural side lighting that creates soft shadows. The color palette is sophisticated, featuring clean whites, warm tans, and metallic silver accents. The style is high-end lifestyle photography, conveying elegance and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKbm-w8xEHfgpBqD1RYvDrrcsq-d3WCkY4g9kxTw8sB27ydoXfUs1Dpi0F3q7BAyVDQZonnFZ33ZajcEAs2AuZGcg_v8MArhMpvK1MzQmZLE77FbiRD--IMEZfBBUBLNFA0j3Hr8tv66CqmPN82QzE0bobdUx_S5BPpRWGf362kNBQsT8PY-gS_8TEBxWuWns9YA7WsGNJdljjlU831Z432xeCq-cx7aFLYUiEJ_W3qtJysdHvKFsP-1cVQz75m-pNTDxFvxxLrhc"/>
+<button class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-unit-md flex flex-col gap-unit-sm">
+<div class="flex justify-between items-start">
+<span class="text-code font-code text-primary uppercase text-[10px] tracking-widest">Accessories</span>
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-body-sm font-bold ml-1">4.7</span>
+</div>
+</div>
+<h3 class="text-label-md font-bold text-on-surface line-clamp-1">Classic Chrono S3</h3>
+<div class="flex items-baseline gap-2">
+<span class="text-h3 font-bold text-on-surface">$350.00</span>
+</div>
+<div class="flex items-center gap-unit-sm mt-1">
+<div class="bg-secondary-container/30 px-2 py-1 rounded-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">percent</span>
+<span class="text-code font-bold text-primary">8% Comm.</span>
+</div>
+<div class="bg-surface-container px-2 py-1 rounded-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">ads_click</span>
+<span class="text-code font-bold text-on-surface-variant">$4.10 EPC</span>
+</div>
+</div>
+<button class="mt-unit-sm w-full bg-primary hover:bg-primary-container text-on-primary py-2.5 rounded-xl font-bold transition-all shadow-md active:scale-95">Get Deal Link</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="product-card-shadow bg-white rounded-xl border border-outline-variant flex flex-col group overflow-hidden hover:translate-y-[-4px] transition-all duration-300">
+<div class="aspect-square bg-surface-container-low relative overflow-hidden">
+<img alt="Audio Headphones" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern wireless over-ear headphones in a deep matte black finish, positioned at an angle against a vibrant blue studio background. The lighting is sharp and technical, emphasizing the sleek industrial design and premium materials. The scene is clean and high-contrast, representing high-quality audio technology. The composition is dynamic, suitable for a professional product discovery platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBywbLmPKFzGujfi1X5SUuPI59uEAeWarg0cqcfxB2K8jN5OgVKbkrYcTWvtyF1JGIfQqYoGLAoBLUIyOZLraIX8i4ddg4-vajE0J2oHi9BFaqw84_mZgQ5gYu8KxjSFjAZThUCPu8j2eJUkkdcmlTPC_ojXKIFMoNiQrinaqRrhWu6shgyEf2DH9L_Gtn645ayA-TuHbkHuZm-3lmWazs1DpgkB8MZvjjl3OpVqHra1wOinGT2iYaw8Nf2GFroRVb-yLuwOkPOKw"/>
+<span class="absolute top-3 left-3 bg-error text-on-error text-[11px] font-bold px-2 py-1 rounded-full">HOT DEAL</span>
+<button class="absolute top-3 right-3 bg-white/80 backdrop-blur-sm p-2 rounded-full text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-unit-md flex flex-col gap-unit-sm">
+<div class="flex justify-between items-start">
+<span class="text-code font-code text-primary uppercase text-[10px] tracking-widest">Electronics</span>
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-body-sm font-bold ml-1">4.8</span>
+</div>
+</div>
+<h3 class="text-label-md font-bold text-on-surface line-clamp-1">Studio Bass Wireless Pro</h3>
+<div class="flex items-baseline gap-2">
+<span class="text-h3 font-bold text-on-surface">$229.00</span>
+</div>
+<div class="flex items-center gap-unit-sm mt-1">
+<div class="bg-secondary-container/30 px-2 py-1 rounded-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">percent</span>
+<span class="text-code font-bold text-primary">15% Comm.</span>
+</div>
+<div class="bg-surface-container px-2 py-1 rounded-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">ads_click</span>
+<span class="text-code font-bold text-on-surface-variant">$1.85 EPC</span>
+</div>
+</div>
+<button class="mt-unit-sm w-full bg-primary hover:bg-primary-container text-on-primary py-2.5 rounded-xl font-bold transition-all shadow-md active:scale-95">Get Deal Link</button>
+</div>
+</div>
+<!-- Repeatable cards for grid density -->
+<!-- Card 4-8 omitted for brevity, logic applies -->
+<div class="product-card-shadow bg-white rounded-xl border border-outline-variant flex flex-col group overflow-hidden hover:translate-y-[-4px] transition-all duration-300">
+<div class="aspect-square bg-surface-container-low relative overflow-hidden">
+<img alt="Lifestyle Shoes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A pair of clean, minimalist white leather lifestyle sneakers set against a warm, sun-drenched outdoor morning light. The shoes are resting on a light-colored wooden deck, with soft bokeh greenery in the far background. The aesthetic is bright, airy, and natural, focusing on the comfort and everyday versatility of the product. Colors are predominantly white, beige, and soft greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvYc0_r16jS7xEtKCF4MuFeNTEf5NKyWt9CwQ7OTCxU8NXO7zTzjOt9tfCB1Mrfj-ljq-qsTK43zL2Sik1WZiY97QEKwUVoci2PCWPM3C1QDAVu4MuWDcSMRWlc9Y1nn380FeKtu-hHwIDNXyI6AdmGzcLXX9E4c-xoT42EgHJXfGYeP0wBCcvZIj_NOsXqfU_XDn_6F6ONz5MAVlGN1CThzjI0sFd5CcKpigHe6uk7Y54cEGSw58jfDmlc5VE9nHPTPXUjD7-JXo"/>
+</div>
+<div class="p-unit-md flex flex-col gap-unit-sm">
+<div class="flex justify-between items-start"><span class="text-code font-code text-primary uppercase text-[10px]">Footwear</span></div>
+<h3 class="text-label-md font-bold text-on-surface">Urban Walkers X1</h3>
+<div class="flex items-baseline gap-2"><span class="text-h3 font-bold text-on-surface">$89.00</span></div>
+<button class="mt-unit-sm w-full bg-primary hover:bg-primary-container text-on-primary py-2.5 rounded-xl font-bold">Get Deal Link</button>
+</div>
+</div>
+<!-- AdSense Placeholder Integrated -->
+<div class="col-span-1 md:col-span-2 xl:col-span-3 bg-surface-container-low rounded-xl border-2 border-dashed border-outline-variant p-unit-xl flex flex-col items-center justify-center min-h-[200px] my-unit-md">
+<span class="font-code text-code text-outline tracking-widest uppercase mb-unit-sm">Sponsored Content</span>
+<div class="w-full max-w-2xl h-1 bg-outline-variant/30 rounded-full overflow-hidden">
+<div class="w-1/3 h-full bg-primary animate-[shimmer_2s_infinite]"></div>
+</div>
+<p class="mt-unit-md text-body-sm text-outline italic">Ads help support our free discovery platform.</p>
+</div>
+<!-- More Product Cards (simulated) -->
+<div class="product-card-shadow bg-white rounded-xl border border-outline-variant flex flex-col group overflow-hidden">
+<div class="aspect-square bg-surface-container-low relative overflow-hidden">
+<img alt="Sunglasses" class="w-full h-full object-cover" data-alt="A pair of designer tortoise-shell sunglasses lying on a beach towel next to a crystal clear glass of water. Bright, midday tropical sunlight creates sharp, stylistic shadows and refractive highlights. The color palette is warm with oranges, browns, and deep sea blues. The mood is high-end summer lifestyle, emphasizing quality optics and chic design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt-aUV4lncYwbIH9HHeLC_w10cMc2RaFBkMlLcOyIxBFDMkyHjCDaMcqLsjsxyVU9qb_B7fBgFbiJcLsGWFwsy2t3b_L7OW7ENIgHNqU09ClPhU51bhadK5cevCIzuXZx1Q1qw-B5zdaIChBbxwSy1jjIL60feMRrJ9VwUAa0iXl04lLS7W6hKYay85wNK4BIV3aLHXbK4CkOvAOdsZSE90qsQRLNzQ3gFtv_7BXabPmYFszFIAJYtBCEZWvmNGAc0y1mPXUSSRRw"/>
+</div>
+<div class="p-unit-md flex flex-col gap-unit-sm">
+<div class="flex justify-between items-start"><span class="text-code font-code text-primary uppercase text-[10px]">Fashion</span></div>
+<h3 class="text-label-md font-bold text-on-surface">Aviator Gold Edition</h3>
+<div class="flex items-baseline gap-2"><span class="text-h3 font-bold text-on-surface">$145.00</span></div>
+<button class="mt-unit-sm w-full bg-primary hover:bg-primary-container text-on-primary py-2.5 rounded-xl font-bold">Get Deal Link</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center gap-unit-sm mt-unit-xl pb-unit-xl">
+<button class="w-10 h-10 flex items-center justify-center rounded-xl border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary text-on-primary font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-all">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-all">3</button>
+<span class="text-outline">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-all">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant dark:border-outline mt-unit-xl w-full">
+<div class="w-full px-gutter py-unit-xl max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-unit-lg">
+<div class="col-span-2">
+<span class="text-h3 font-h3 text-primary font-bold">AffiliatePro</span>
+<p class="mt-unit-sm text-body-sm text-on-surface-variant max-w-xs">Connecting creators and marketers with high-performance affiliate opportunities globally.</p>
+<div class="flex gap-unit-sm mt-unit-md">
+<span class="material-symbols-outlined text-outline hover:text-primary cursor-pointer">public</span>
+<span class="material-symbols-outlined text-outline hover:text-primary cursor-pointer">share</span>
+<span class="material-symbols-outlined text-outline hover:text-primary cursor-pointer">rss_feed</span>
+</div>
+</div>
+<div>
+<h4 class="text-label-md font-bold mb-unit-md">Products</h4>
+<ul class="flex flex-col gap-unit-sm">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Best Deals</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Trending</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">New Drops</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-md font-bold mb-unit-md">Company</h4>
+<ul class="flex flex-col gap-unit-sm">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-md font-bold mb-unit-md">Support</h4>
+<ul class="flex flex-col gap-unit-sm">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">API Docs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-md font-bold mb-unit-md">Policies</h4>
+<ul class="flex flex-col gap-unit-sm">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-unit-md border-t border-outline-variant/30">
+<p class="text-[12px] text-on-surface-variant text-center opacity-70">© 2024 AffiliatePro Discovery. All rights reserved. Affiliate Disclosure: We may earn commissions from qualifying purchases.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center py-unit-sm bg-surface-container dark:bg-inverse-surface shadow-lg border-t border-outline-variant dark:border-outline z-50 lg:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-md font-label-md text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-label-md font-label-md text-[10px]">Categories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant" href="#">
+<span class="material-symbols-outlined">sell</span>
+<span class="text-label-md font-label-md text-[10px]">Deals</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-label-md font-label-md text-[10px]">Wishlist</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-md font-label-md text-[10px]">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button (Only on discovery/home context) -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center lg:bottom-10 lg:right-10 hover:scale-110 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined text-[28px]">filter_list</span>
+</button>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.add('opacity-80');
+                setTimeout(() => this.classList.remove('opacity-80'), 150);
+            });
+        });
+
+        // Search Bar Focus Effect
+        const searchInput = document.querySelector('input[type="text"]');
+        if(searchInput) {
+            searchInput.addEventListener('focus', () => {
+                searchInput.parentElement.classList.add('scale-105');
+                searchInput.parentElement.style.transition = 'all 0.3s ease';
+            });
+            searchInput.addEventListener('blur', () => {
+                searchInput.parentElement.classList.remove('scale-105');
+            });
+        }
+    </script>
+</body></html>

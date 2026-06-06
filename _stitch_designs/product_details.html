@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AffiliatePro | Product Detail Discovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#dae2fd",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "tertiary": "#943700",
+                        "on-secondary-container": "#5c647a",
+                        "secondary": "#565e74",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "surface-container-high": "#e7e7f3",
+                        "primary": "#004ac6",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#bc4800",
+                        "outline-variant": "#c3c6d7",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "on-surface": "#191b23",
+                        "surface-container": "#ededf9",
+                        "on-background": "#191b23",
+                        "surface-container-low": "#f3f3fe",
+                        "on-tertiary-fixed": "#360f00",
+                        "primary-container": "#2563eb",
+                        "secondary-fixed": "#dae2fd",
+                        "surface-container-highest": "#e1e2ed",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "outline": "#737686",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e1e2ed",
+                        "on-secondary-fixed": "#131b2e",
+                        "background": "#faf8ff",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d9d9e5",
+                        "on-tertiary-container": "#ffede6",
+                        "inverse-on-surface": "#f0f0fb",
+                        "on-primary-fixed": "#00174b",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "inverse-primary": "#b4c5ff",
+                        "on-surface-variant": "#434655",
+                        "on-primary-container": "#eeefff",
+                        "surface-bright": "#faf8ff",
+                        "surface-tint": "#0053db",
+                        "primary-fixed": "#dbe1ff",
+                        "inverse-surface": "#2e3039",
+                        "surface": "#faf8ff",
+                        "tertiary-fixed": "#ffdbcd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit-xs": "4px",
+                        "gutter": "24px",
+                        "unit-xl": "48px",
+                        "unit-sm": "8px",
+                        "unit-md": "16px",
+                        "margin-mobile": "16px",
+                        "unit-lg": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "h1-mobile": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "code": ["Inter"],
+                        "h3": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "h1-mobile": ["30px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "code": ["13px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #F8FAFC;
+        }
+        .surface-1 {
+            background-color: #FFFFFF;
+            box-shadow: 0px 1px 3px rgba(15, 23, 42, 0.08), 0px 10px 15px -3px rgba(15, 23, 42, 0.05);
+            border: 1px solid #E2E8F0;
+        }
+        .material-symbols-outlined {
+            font-size: 20px;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-unit-xl">
+<div class="text-h3 font-h3 font-bold text-primary dark:text-primary-fixed-dim">AffiliatePro</div>
+<div class="hidden md:flex gap-unit-lg items-center">
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Deals</a>
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Trending</a>
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Categories</a>
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Blog</a>
+</div>
+<div class="flex items-center gap-unit-md">
+<div class="hidden lg:flex items-center bg-surface-container-high rounded-xl px-unit-md h-10 border border-outline-variant">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-48" placeholder="Search products..." type="text"/>
+</div>
+<span class="material-symbols-outlined text-primary cursor-pointer">dark_mode</span>
+<span class="material-symbols-outlined text-primary cursor-pointer md:hidden">menu</span>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-gutter py-unit-lg lg:py-unit-xl">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-unit-xs text-body-sm text-on-surface-variant mb-unit-lg">
+<span>Electronics</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span>Audio</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="font-bold text-on-surface">Premium Noise Cancelling Headphones</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-lg lg:gap-unit-xl items-start">
+<!-- Left Column: Gallery -->
+<div class="lg:col-span-7 space-y-unit-md">
+<div class="surface-1 rounded-xl overflow-hidden aspect-square">
+<img class="w-full h-full object-cover" data-alt="A professional studio product shot of high-end over-ear noise-cancelling headphones in matte black. The lighting is soft and directional, highlighting the premium leather texture of the ear cups and the sleek metallic finish of the headband. The background is a clean, neutral gray gradient that emphasizes the tech-focused, professional aesthetic. Shadows are subtle and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDupsDSlrP793A4em0ROW7uptniSGqCnivXyteSCW6KHjxrOz1G2jDi0Kg7UCDIyOx9AD-9bUTrT7PoiYzyNjWNRPqcMqsgjfYuTSrHbclRGxMPKRS-pRhbeZ-5XpPvRvmTUDddFmHdBq2vdm420qI1VhsJ4R-OCZX59r4d3Srjaq45EYOtyfPI_nhkkeI5T3QeamdApr79b2ynlsuxu247TzicQSnKUBzBJT8wqxh393oGHZL9pgT1sJTdYuHGP3Bmfx351FVlCI0"/>
+</div>
+<div class="grid grid-cols-4 gap-unit-sm">
+<div class="surface-1 rounded-lg overflow-hidden aspect-square cursor-pointer border-2 border-primary">
+<img class="w-full h-full object-cover" data-alt="Close-up detail shot of the headphone ear cup showing the fine mesh texture and the tactile control buttons. High-end macro photography with sharp focus and deep blacks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN8VRIofILC3TNDE5WDji-9IXAFBK0m6VAPrJk5XtB7jF2Ex7mDw2lmRi_RnFiuw4dQT8oqgk_MNe-ljU0UOMsKBVuXH4oqEKWzeEQslEsypNfAM7OhG-pt_7M7yjflwRHS5Qa4r4A7TxCi2fWWyDLqs6NCgYEnQjrxMPcj8WHvlgGFlCapeWYLn5tWWEb6dPu8uQ2Sx02rKnwLu037YmbCex-NJtmTkt9zJa-B_KHxMNiNfQm6ldcVuCFTxfMUO6QT6kgpD2Ry2c"/>
+</div>
+<div class="surface-1 rounded-lg overflow-hidden aspect-square cursor-pointer hover:border-outline">
+<img class="w-full h-full object-cover" data-alt="A lifestyle shot of the headphones being worn by a professional in a modern, brightly lit office space. The image conveys productivity and focus with a shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXV-D2mR-8SxAURi6pCXllS7M2uEy9Govf97DnU01CaAyfik_novWO7chaJDfhc9ISBlKX8QwoKP2-vrla3VU4IF6VuXaTWDZi2AhcfYFFRAFd5kCwa3GYHT2g6jjWbBha2BacGQC5R5fc24Knt_jCbf6esEHSl8x9R9uhEOoZPC50vjEAg7yA_KSfKTqH-3BBzAgBCOgwEeHIQaNexciFfnnxlhURk0qh_xV-xkOveknQhrAJmz6HvZOU3T59Ob4N1Jv84tjp27k"/>
+</div>
+<div class="surface-1 rounded-lg overflow-hidden aspect-square cursor-pointer hover:border-outline">
+<img class="w-full h-full object-cover" data-alt="Detailed view of the charging port and high-quality braided cable connector. The focus is on the precision engineering and premium materials used in construction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn5poCz1UnFz5VDmruKPgVjhTXnd3GZgO4GPgA39CJOaYUeFyH7uPv_sLxT0kAfGy3ArvnicSfQ4pZFlRmnKis24xvPrflBLxwosCr2LF-_8VxzHL9aNjhVwGhra0ezcy26TsW5bs6fbUjsvlZTTFFhnGJ-93ymBPDWL6pd0F6H9M_11dfE4YGHJvABl8qEJcNjxdKzv909A2YGceJXibZQTsFodeYkyhEHOZu-LvNzog4jG6E6nIGUHKrvvp1VbpaW33Suhj6kuw"/>
+</div>
+<div class="surface-1 rounded-lg overflow-hidden aspect-square cursor-pointer hover:border-outline">
+<img class="w-full h-full object-cover" data-alt="The headphones folded neatly inside their premium carrying case, showing portability and protection for travel. Elegant and organized layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJW3PqZAt5L5-z6NmE0vUeeuJXjyFtxsFvH5AXfFlInhPVagT5Qt_6J60dbFCR17HUWCDC9qmtaT7wBwgo6A7c9j6ZNYJJQZPqGFeq7B3bdFlO5v1yFojoPIOzvJAkwBN0CvJ5AbGLEsReQcS2uq1zq501G2qsN0nI_G2ZuKHk3joKpOB0qFYjck0h4_fYOio1XS7dc-Aa1yDMeTAbQ1Aom_b4eGuWJAniY7NNqCbD-xJf8H1cNEKbuppcpHixIvBzgG2lCPZoUpg"/>
+</div>
+</div>
+</div>
+<!-- Right Column: Product Info & Buy -->
+<div class="lg:col-span-5 space-y-unit-lg">
+<div class="space-y-unit-xs">
+<p class="text-label-md font-label-md text-primary tracking-widest">SONY SERIES X</p>
+<h1 class="font-h2 text-h2 text-on-surface">Pro-Stream ANC Wireless Headphones Z-100</h1>
+<div class="flex items-center gap-unit-sm mt-unit-sm">
+<div class="flex text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<span class="text-body-sm font-bold text-on-surface-variant">(1,248 Reviews)</span>
+</div>
+</div>
+<div class="p-unit-lg surface-1 rounded-xl space-y-unit-md">
+<div class="flex items-end gap-unit-md">
+<span class="font-h1 text-h1 text-on-surface">$299.00</span>
+<span class="text-body-lg text-outline line-through mb-1">$349.00</span>
+<span class="bg-error-container text-on-error-container px-unit-sm py-1 rounded text-label-md font-label-md mb-1">15% OFF</span>
+</div>
+<div class="flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-green-600">inventory_2</span>
+<span class="text-body-sm font-bold text-green-600">In Stock - Ready to Ship</span>
+</div>
+<div class="space-y-unit-sm pt-unit-sm">
+<button class="w-full py-4 bg-primary text-on-primary font-label-md text-label-md rounded-xl hover:bg-primary-container transition-all flex items-center justify-center gap-unit-sm">
+<span class="material-symbols-outlined">shopping_cart</span>
+                            Buy on Amazon
+                        </button>
+<div class="grid grid-cols-3 gap-unit-sm">
+<button class="flex flex-col items-center justify-center py-unit-sm border border-outline-variant rounded-lg hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-on-surface-variant">favorite</span>
+<span class="text-[10px] mt-1 uppercase font-bold text-on-surface-variant">Save</span>
+</button>
+<button class="flex flex-col items-center justify-center py-unit-sm border border-outline-variant rounded-lg hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-on-surface-variant">compare_arrows</span>
+<span class="text-[10px] mt-1 uppercase font-bold text-on-surface-variant">Compare</span>
+</button>
+<button class="flex flex-col items-center justify-center py-unit-sm border border-outline-variant rounded-lg hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-on-surface-variant">share</span>
+<span class="text-[10px] mt-1 uppercase font-bold text-on-surface-variant">Share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- AdSense Placeholder -->
+<div class="bg-surface-container-low rounded-xl border-2 border-dashed border-outline-variant p-unit-lg flex flex-items-center justify-center min-h-[120px]">
+<span class="font-code text-code text-outline uppercase tracking-widest self-center">Sponsored Content</span>
+</div>
+<!-- Short Specs List -->
+<div class="space-y-unit-sm">
+<h3 class="font-label-md text-label-md uppercase text-outline tracking-wider">Key Features</h3>
+<ul class="space-y-unit-sm">
+<li class="flex items-start gap-unit-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-body-sm">Industry-leading Active Noise Cancellation with dual sensors.</span>
+</li>
+<li class="flex items-start gap-unit-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-body-sm">30-hour battery life with 10-minute quick charge.</span>
+</li>
+<li class="flex items-start gap-unit-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-body-sm">Multipoint connection for seamless device switching.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Details Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-xl mt-unit-xl">
+<!-- Left: Main Content -->
+<div class="lg:col-span-8 space-y-unit-xl">
+<!-- Pros and Cons -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-unit-lg">
+<div class="surface-1 rounded-xl p-unit-lg border-l-4 border-green-500">
+<h4 class="font-h3 text-h3 mb-unit-md flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-green-500">thumb_up</span> Pros
+                        </h4>
+<ul class="space-y-unit-sm">
+<li class="text-body-md">• Incredible noise isolation technology</li>
+<li class="text-body-md">• Lightweight and ergonomic design</li>
+<li class="text-body-md">• Rich, balanced audio profile</li>
+<li class="text-body-md">• Superior microphone quality for calls</li>
+</ul>
+</div>
+<div class="surface-1 rounded-xl p-unit-lg border-l-4 border-error">
+<h4 class="font-h3 text-h3 mb-unit-md flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-error">thumb_down</span> Cons
+                        </h4>
+<ul class="space-y-unit-sm">
+<li class="text-body-md">• Premium price point compared to rivals</li>
+<li class="text-body-md">• Carrying case is somewhat bulky</li>
+<li class="text-body-md">• Touch controls take time to master</li>
+</ul>
+</div>
+</section>
+<!-- Full Specifications Table -->
+<section>
+<h3 class="font-h2 text-h2 mb-unit-lg">Technical Specifications</h3>
+<div class="surface-1 rounded-xl overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container">
+<th class="p-unit-md font-label-md text-label-md">Feature</th>
+<th class="p-unit-md font-label-md text-label-md">Details</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr>
+<td class="p-unit-md font-bold text-on-surface-variant">Driver Size</td>
+<td class="p-unit-md">40mm Liquid Crystal Polymer (LCP)</td>
+</tr>
+<tr>
+<td class="p-unit-md font-bold text-on-surface-variant">Bluetooth Version</td>
+<td class="p-unit-md">5.2 (LDAC, AAC, SBC)</td>
+</tr>
+<tr>
+<td class="p-unit-md font-bold text-on-surface-variant">Frequency Response</td>
+<td class="p-unit-md">4Hz - 40,000Hz</td>
+</tr>
+<tr>
+<td class="p-unit-md font-bold text-on-surface-variant">Weight</td>
+<td class="p-unit-md">254g (8.96 oz)</td>
+</tr>
+<tr>
+<td class="p-unit-md font-bold text-on-surface-variant">Sensors</td>
+<td class="p-unit-md">Dual Noise Sensor, Proximity Sensor</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- Right: Sidebar Sticky Recommendations -->
+<aside class="lg:col-span-4 space-y-unit-lg sticky top-24">
+<div class="surface-1 rounded-xl p-unit-lg">
+<h3 class="font-h3 text-h3 mb-unit-md">Recommended</h3>
+<div class="space-y-unit-md">
+<!-- Rec Card 1 -->
+<div class="flex gap-unit-md group cursor-pointer">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="A compact minimalist desktop headphone stand made of walnut wood and matte black aluminum. High-end lifestyle product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC02SzdN6tTpyMx14OrqyivyfagvJHnCx5WvWaWc77LCN5iXWsvKRCLyKIwpUnkla8K7f_xSxIgaDQIlH2mYLoDFRFGEDfbi2Xmkp0-ocMTS1TqolgjsgZnqPToBdIPzqFAXKtuuOHrNBHuS0xj74q_n0XPSuT0UoF9DOTyZs4AYGObpB82HilASLxoasveyE7Gz2z8K7m2-r07AWv_ZPwfVMSyf-pCYa5omhK4HL04wDjDyevXOeF46EqLx84FFZI8pn05Dh_Ulps"/>
+</div>
+<div>
+<h4 class="text-body-sm font-bold group-hover:text-primary transition-colors">Premium Wooden Headphone Stand</h4>
+<p class="text-primary font-bold mt-1">$45.00</p>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase">Accessory</span>
+</div>
+</div>
+<!-- Rec Card 2 -->
+<div class="flex gap-unit-md group cursor-pointer">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="High-quality braided USB-C charging cable with gold-plated connectors on a clean white surface. Macro shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlMufebcrFJzN3D4l2ljXm7HQDAqIEvPZNVll5l8NURFTv-_VEPIxlYETf1tK5SaMZuapWLSBLy_LdAlFIt-oDpgqDsK-GHIRKvFkaxc7EK21rhd4ydAEXf_w5zpjKyOkR7X0bvS2E80YVUGZ146JgvhQpM-33aXce33JBqgakcIjhZlCKT1quB57esNzP5zvQpjl93FHHH-IkcrOxXICaDl9fUpPLC4SZF6ZrQlvOSmpVClGWGbTNqtFEI5Z6S0FN5Dfk57TCD1o"/>
+</div>
+<div>
+<h4 class="text-body-sm font-bold group-hover:text-primary transition-colors">Ultra-Durable Braided USB-C Cable</h4>
+<p class="text-primary font-bold mt-1">$19.99</p>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase">Cable</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-unit-lg py-2 border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-primary-container hover:text-on-primary transition-all">
+                        See More Accessories
+                    </button>
+</div>
+<div class="bg-surface-container-low rounded-xl border-2 border-dashed border-outline-variant p-unit-lg flex flex-items-center justify-center min-h-[300px]">
+<span class="font-code text-code text-outline uppercase tracking-widest text-center self-center">Vertical Banner Ad<br/>Place Here</span>
+</div>
+</aside>
+</div>
+<!-- Related Products Section -->
+<section class="mt-unit-xl">
+<div class="flex justify-between items-end mb-unit-lg">
+<div>
+<h2 class="font-h2 text-h2">Similar Alternatives</h2>
+<p class="text-on-surface-variant">Top rated noise cancelling headphones in this category</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-unit-xs hover:underline">
+                    View All <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-unit-lg">
+<!-- Related 1 -->
+<div class="surface-1 rounded-xl p-unit-md group cursor-pointer hover:-translate-y-1 transition-all">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden mb-unit-sm relative">
+<img class="w-full h-full object-cover" data-alt="Over-ear headphones in a sophisticated sand-beige color, set against a warm aesthetic background. Minimalist branding visible on the headband." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLW6LJjtqRLSua8HxcmiH4gVL5Up_lPuCJdwzUusSeNXOQlzx8jfijd6-rTBZyIeYhhebZ7n2iCS0cMCR5LWZyMuYYnQThTCaRSXY_bgWBk7pn1Ik5rSssGDHeCd9kslojRhZPUaT2sXPiaVWp0TVi1VaS_oKU9MqsFIlmOF8oB8dvtL1ezq_UQdOlm5-iZosEam6d97h-NVfC-bmPu69wWrF0GP-cgyyfsQxY5MqKXYIgFyhd8B8KpT7fZxCFQjcG5jYjEdJrdeg"/>
+<div class="absolute top-2 right-2 bg-white/80 backdrop-blur rounded-full p-1 shadow-sm">
+<span class="material-symbols-outlined text-tertiary">star</span>
+</div>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="text-[10px] font-bold text-outline uppercase">Bose</span>
+<span class="text-body-sm font-bold text-primary">4.8 ★</span>
+</div>
+<h4 class="text-body-md font-bold mb-2 group-hover:text-primary transition-colors">Quiet Comfort Ultra Elite</h4>
+<p class="text-body-lg font-bold">$329.00</p>
+</div>
+<!-- Related 2 -->
+<div class="surface-1 rounded-xl p-unit-md group cursor-pointer hover:-translate-y-1 transition-all">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden mb-unit-sm">
+<img class="w-full h-full object-cover" data-alt="Silver finish sleek headphones with oversized ear cushions. Modern futuristic tech photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhAsqhF_U7JfaSV1BcnVH2HKRDVOjeLrU-toF2hhbp91nYMh1RNiSxMt1h5pz-fQL_z8ZyP2Lpz9U8yhtuXkX9pvd1WdWS4D0H7lqo7g-oH6oK6nohyu0qWkHtShO1IIqTGFksc91ORHHwOCMphZ5RY4XlnzWEdtAlURR1WXSWvhu_towR6S3KCJ9c_5bkxwyflELfi2GzuELa7Fuma6KMUHQ_3aZ9bGDvf0Cjg0XO8oFTQ9I7wGqkWZVZqJlaSxobd54hsNZze24"/>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="text-[10px] font-bold text-outline uppercase">Sennheiser</span>
+<span class="text-body-sm font-bold text-primary">4.9 ★</span>
+</div>
+<h4 class="text-body-md font-bold mb-2 group-hover:text-primary transition-colors">Momentum 4 Wireless Pro</h4>
+<p class="text-body-lg font-bold">$349.00</p>
+</div>
+<!-- Related 3 -->
+<div class="surface-1 rounded-xl p-unit-md group cursor-pointer hover:-translate-y-1 transition-all">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden mb-unit-sm">
+<img class="w-full h-full object-cover" data-alt="Compact white wireless earbuds with a high-gloss finish charging case. Elegant and clean layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNReatkcg9Y2DmhEpzpcO-FPNhiQfmzZSdcTlQ0QPZYzj4c1aXYQHiEf_V7J6bRZDpsxJ5zcGWM0CsFz3wD0E4Xa532GDt8QOt4RlRZITlqj8sh8c1N-AZifhG9Wbu4zMpj8nMUHveDxuGSNene6pDQuhq3Ah3B185IiqYFDd2Vj03SW8mIlGsbI--GBMjGxl9ALj4BCTy1yjneCdtKvDAt1R4-An_aNo3WnQVMe0xuFXkK1CMa8ayiPrrwgn-jkKq6h6j2gouAz4"/>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="text-[10px] font-bold text-outline uppercase">Apple</span>
+<span class="text-body-sm font-bold text-primary">4.7 ★</span>
+</div>
+<h4 class="text-body-md font-bold mb-2 group-hover:text-primary transition-colors">AirPods Max Platinum</h4>
+<p class="text-body-lg font-bold">$549.00</p>
+</div>
+<!-- Related 4 -->
+<div class="surface-1 rounded-xl p-unit-md group cursor-pointer hover:-translate-y-1 transition-all">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden mb-unit-sm">
+<img class="w-full h-full object-cover" data-alt="Navy blue headphones with copper accents, professional industrial design style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfV8Q9Q59VXZHC8wqdTJLkLhFuC1TgsVV3MIlCywWlyo7b_pVCjnimQckfbgm0fljmKVS0_cvX2_1zMD4R_QcXvusKc3yfbix__HZR0BNPDpaVFAbXSWVevG9MxcvmHnIZ3KRcOaut8yoqk2aypOYZS1hOR92MZ4C4fpojs1Tnm9ojiFtmJum1WHVzAm3dYIq4PscB1IxNoTVCErs2QLzp5ObRf28SFQ8k0A7yONUMOXDcCghaJUWQ-L5K6ja-iQyMw44XPz9U1xI"/>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="text-[10px] font-bold text-outline uppercase">Jabra</span>
+<span class="text-body-sm font-bold text-primary">4.5 ★</span>
+</div>
+<h4 class="text-body-md font-bold mb-2 group-hover:text-primary transition-colors">Elite 85h Smart Sound</h4>
+<p class="text-body-lg font-bold">$249.00</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-unit-xl bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant dark:border-outline">
+<div class="w-full px-gutter py-unit-xl max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-unit-lg">
+<div class="col-span-2 space-y-unit-md">
+<div class="text-h3 font-h3 text-primary">AffiliatePro</div>
+<p class="text-body-sm text-on-surface-variant max-w-xs">Connecting you with the world's most innovative products through data-driven research and professional reviews.</p>
+<div class="flex gap-unit-sm">
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary">face_nod</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary">alternate_email</span>
+</div>
+</div>
+<div class="space-y-unit-sm">
+<h5 class="font-label-md text-label-md text-on-surface">Products</h5>
+<ul class="text-body-sm text-on-surface-variant space-y-2">
+<li class="hover:text-primary cursor-pointer transition-colors">New Arrivals</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Best Sellers</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Deals</li>
+</ul>
+</div>
+<div class="space-y-unit-sm">
+<h5 class="font-label-md text-label-md text-on-surface">Company</h5>
+<ul class="text-body-sm text-on-surface-variant space-y-2">
+<li class="hover:text-primary cursor-pointer transition-colors">About Us</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Careers</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Press</li>
+</ul>
+</div>
+<div class="space-y-unit-sm">
+<h5 class="font-label-md text-label-md text-on-surface">Policies</h5>
+<ul class="text-body-sm text-on-surface-variant space-y-2">
+<li class="hover:text-primary cursor-pointer transition-colors">Terms of Use</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Privacy</li>
+<li class="hover:text-primary cursor-pointer transition-colors">Cookie Policy</li>
+</ul>
+</div>
+</div>
+<div class="w-full border-t border-outline-variant py-unit-md text-center">
+<p class="text-[11px] text-outline px-gutter max-w-container-max mx-auto">
+                © 2024 AffiliatePro Discovery. All rights reserved. Affiliate Disclosure: We may earn commissions from qualifying purchases. This helps support our research and development of independent reviews.
+            </p>
+</div>
+</footer>
+<!-- Mobile Sticky Buy Now -->
+<div class="lg:hidden fixed bottom-0 left-0 w-full bg-surface-container/95 backdrop-blur-md p-unit-md border-t border-outline-variant z-50 flex items-center justify-between gap-unit-md">
+<div class="flex flex-col">
+<span class="text-label-md font-bold text-on-surface">$299.00</span>
+<span class="text-[10px] text-green-600 font-bold uppercase">In Stock</span>
+</div>
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-lg font-label-md text-label-md shadow-lg active:scale-95 transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_cart</span>
+            Buy Now
+        </button>
+</div>
+<!-- BottomNavBar (Mobile Only Anchor) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center py-unit-sm bg-surface-container dark:bg-inverse-surface shadow-lg border-t border-outline-variant dark:border-outline lg:hidden z-40 pb-[80px]">
+<div class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold transition-transform active:scale-95">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px]">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant transition-transform active:scale-95">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px]">Categories</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant transition-transform active:scale-95">
+<span class="material-symbols-outlined">sell</span>
+<span class="text-[10px]">Deals</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant transition-transform active:scale-95">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px]">Wishlist</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant transition-transform active:scale-95">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px]">Profile</span>
+</div>
+</nav>
+</body></html>

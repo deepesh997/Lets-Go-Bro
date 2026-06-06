@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AffiliatePro | Discover the Best Deals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#dae2fd",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "tertiary": "#943700",
+                      "on-secondary-container": "#5c647a",
+                      "secondary": "#565e74",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "surface-container-high": "#e7e7f3",
+                      "primary": "#004ac6",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#bc4800",
+                      "outline-variant": "#c3c6d7",
+                      "on-error-container": "#93000a",
+                      "on-error": "#ffffff",
+                      "on-surface": "#191b23",
+                      "surface-container": "#ededf9",
+                      "on-background": "#191b23",
+                      "surface-container-low": "#f3f3fe",
+                      "on-tertiary-fixed": "#360f00",
+                      "primary-container": "#2563eb",
+                      "secondary-fixed": "#dae2fd",
+                      "surface-container-highest": "#e1e2ed",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "outline": "#737686",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-variant": "#e1e2ed",
+                      "on-secondary-fixed": "#131b2e",
+                      "background": "#faf8ff",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#d9d9e5",
+                      "on-tertiary-container": "#ffede6",
+                      "inverse-on-surface": "#f0f0fb",
+                      "on-primary-fixed": "#00174b",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "inverse-primary": "#b4c5ff",
+                      "on-surface-variant": "#434655",
+                      "on-primary-container": "#eeefff",
+                      "surface-bright": "#faf8ff",
+                      "surface-tint": "#0053db",
+                      "primary-fixed": "#dbe1ff",
+                      "inverse-surface": "#2e3039",
+                      "surface": "#faf8ff",
+                      "tertiary-fixed": "#ffdbcd"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit-xs": "4px",
+                      "gutter": "24px",
+                      "unit-xl": "48px",
+                      "unit-sm": "8px",
+                      "unit-md": "16px",
+                      "margin-mobile": "16px",
+                      "unit-lg": "24px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "h1-mobile": ["Plus Jakarta Sans"],
+                      "body-md": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "h1": ["Plus Jakarta Sans"],
+                      "h2": ["Plus Jakarta Sans"],
+                      "code": ["Inter"],
+                      "h3": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "h1-mobile": ["30px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "code": ["13px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest border-b border-outline-variant shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16">
+<div class="flex items-center gap-unit-lg">
+<a class="text-h3 font-h3 font-bold text-primary" href="#">AffiliatePro</a>
+<nav class="hidden lg:flex items-center gap-unit-md">
+<a class="text-label-md font-label-md text-primary border-b-2 border-primary pb-1" href="#">Deals</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Trending</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Categories</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Blog</a>
+</nav>
+</div>
+<div class="flex items-center gap-unit-md flex-1 justify-end">
+<div class="hidden md:flex relative w-full max-w-sm">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="Search for products..." type="text"/>
+</div>
+<div class="flex items-center gap-unit-sm">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-all">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-all md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Section 1: Hero Banner -->
+<section class="relative bg-surface overflow-hidden py-unit-xl">
+<div class="max-w-container-max mx-auto px-gutter grid md:grid-cols-2 gap-unit-xl items-center">
+<div class="space-y-unit-lg z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/10 text-primary rounded-full">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="text-label-md font-label-md">Best Price Guaranteed</span>
+</div>
+<h1 class="font-h1 text-h1 text-on-surface leading-tight">Find The Best Deals Online</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">Compare thousands of products from top marketplaces. Track prices, check stock availability, and save more on every purchase with expert affiliate insights.</p>
+<div class="flex flex-wrap gap-unit-md">
+<button class="px-8 py-3 bg-primary text-on-primary font-label-md rounded-xl shadow-lg hover:translate-y-[-2px] active:scale-95 transition-all">Browse Products</button>
+<button class="px-8 py-3 border border-outline-variant text-on-surface font-label-md rounded-xl hover:bg-surface-container-low transition-all">How it works</button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary/5 rounded-full blur-3xl"></div>
+<img alt="Modern Ecommerce Illustration" class="relative z-10 w-full h-auto rounded-xl shadow-2xl border border-outline-variant" data-alt="A clean, minimalist 3D isometric illustration showcasing digital commerce and product discovery. Floating glossy cards represent different electronics and fashion items connected by soft blue glowing lines to a central search bar. The aesthetic is high-key with a crisp white and professional blue color palette, set against a soft gray background that emphasizes depth and clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Zo6pgR2vWon4YO46qnD3hEqDezGEgkkdm2yR6xkzSQnTjgI7In_GmSkGKREmfbUBfvbZjb_6Q-NXIGVwE6gfC2MNg37oTvnb45oK1vRiPVhID_RDNFdAmFJnEybnED-iU-oJKxciyV0lp_uiZuOHBHT8CyVeTApWHrlHLh7v2unw3A1N8Obh4dL_YZcYmSZ7E0Azx-PTA6DdPoK4lOemg3Xx5ka6ns_WM8CI5oylTUuFLVrFpAfQob6xZed56VcYfj67UGgMVds"/>
+</div>
+</div>
+</section>
+<!-- Section 2: Large Search Bar & Popular Searches -->
+<section class="py-unit-lg bg-surface-container-low">
+<div class="max-w-4xl mx-auto px-gutter text-center space-y-unit-md">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-6 top-1/2 -translate-y-1/2 text-outline text-2xl group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full h-16 pl-16 pr-6 bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm focus:ring-4 focus:ring-primary/10 focus:border-primary text-body-lg outline-none transition-all" placeholder="What are you looking for today?" type="text"/>
+</div>
+<div class="flex flex-wrap justify-center items-center gap-unit-sm">
+<span class="text-label-md font-label-md text-on-surface-variant">Popular:</span>
+<a class="px-4 py-1.5 bg-surface-container-highest text-on-surface text-body-sm rounded-full hover:bg-primary-container hover:text-on-primary transition-all" href="#">Latest Smartwatches</a>
+<a class="px-4 py-1.5 bg-surface-container-highest text-on-surface text-body-sm rounded-full hover:bg-primary-container hover:text-on-primary transition-all" href="#">Wireless Earbuds</a>
+<a class="px-4 py-1.5 bg-surface-container-highest text-on-surface text-body-sm rounded-full hover:bg-primary-container hover:text-on-primary transition-all" href="#">Gaming Laptops</a>
+</div>
+</div>
+</section>
+<!-- Section 3: Top Categories -->
+<section class="py-unit-xl max-w-container-max mx-auto px-gutter">
+<div class="flex justify-between items-end mb-unit-lg">
+<div class="space-y-1">
+<h2 class="font-h2 text-h2">Shop by Category</h2>
+<p class="text-on-surface-variant">Explore curated collections across niches</p>
+</div>
+<a class="text-primary font-label-md flex items-center gap-1 group" href="#">View All <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-unit-md">
+<!-- Category Cards -->
+<div class="bg-surface-container-lowest p-unit-md rounded-xl border border-outline-variant hover:border-primary hover:shadow-md transition-all text-center cursor-pointer group">
+<div class="w-14 h-14 bg-surface-container mx-auto rounded-xl flex items-center justify-center mb-unit-sm group-hover:bg-primary-container/10 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">devices</span>
+</div>
+<h3 class="font-label-md text-label-md mb-1">Electronics</h3>
+<p class="text-body-sm text-outline">1.2k+ Products</p>
+</div>
+<div class="bg-surface-container-lowest p-unit-md rounded-xl border border-outline-variant hover:border-primary hover:shadow-md transition-all text-center cursor-pointer group">
+<div class="w-14 h-14 bg-surface-container mx-auto rounded-xl flex items-center justify-center mb-unit-sm group-hover:bg-primary-container/10 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">checkroom</span>
+</div>
+<h3 class="font-label-md text-label-md mb-1">Fashion</h3>
+<p class="text-body-sm text-outline">850+ Products</p>
+</div>
+<div class="bg-surface-container-lowest p-unit-md rounded-xl border border-outline-variant hover:border-primary hover:shadow-md transition-all text-center cursor-pointer group">
+<div class="w-14 h-14 bg-surface-container mx-auto rounded-xl flex items-center justify-center mb-unit-sm group-hover:bg-primary-container/10 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">face_5</span>
+</div>
+<h3 class="font-label-md text-label-md mb-1">Beauty</h3>
+<p class="text-body-sm text-outline">400+ Products</p>
+</div>
+<div class="bg-surface-container-lowest p-unit-md rounded-xl border border-outline-variant hover:border-primary hover:shadow-md transition-all text-center cursor-pointer group">
+<div class="w-14 h-14 bg-surface-container mx-auto rounded-xl flex items-center justify-center mb-unit-sm group-hover:bg-primary-container/10 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">home</span>
+</div>
+<h3 class="font-label-md text-label-md mb-1">Home</h3>
+<p class="text-body-sm text-outline">620+ Products</p>
+</div>
+<div class="bg-surface-container-lowest p-unit-md rounded-xl border border-outline-variant hover:border-primary hover:shadow-md transition-all text-center cursor-pointer group">
+<div class="w-14 h-14 bg-surface-container mx-auto rounded-xl flex items-center justify-center mb-unit-sm group-hover:bg-primary-container/10 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">fitness_center</span>
+</div>
+<h3 class="font-label-md text-label-md mb-1">Sports</h3>
+<p class="text-body-sm text-outline">230+ Products</p>
+</div>
+<div class="bg-surface-container-lowest p-unit-md rounded-xl border border-outline-variant hover:border-primary hover:shadow-md transition-all text-center cursor-pointer group">
+<div class="w-14 h-14 bg-surface-container mx-auto rounded-xl flex items-center justify-center mb-unit-sm group-hover:bg-primary-container/10 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">toys</span>
+</div>
+<h3 class="font-label-md text-label-md mb-1">Toys</h3>
+<p class="text-body-sm text-outline">150+ Products</p>
+</div>
+</div>
+</section>
+<!-- Section 4: Trending Products Grid (Bento/Card Mix) -->
+<section class="py-unit-xl bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-unit-lg gap-unit-md">
+<h2 class="font-h2 text-h2">Trending Opportunities</h2>
+<div class="flex gap-unit-sm">
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg font-label-md text-body-sm">All</button>
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface border border-outline-variant rounded-lg font-label-md text-body-sm">Electronics</button>
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface border border-outline-variant rounded-lg font-label-md text-body-sm">Gadgets</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-unit-lg">
+<!-- Product Card -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="relative aspect-square bg-surface-container-low overflow-hidden">
+<img alt="Smartwatch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A studio product shot of a sleek, minimalist white smartwatch with a metallic bezel, placed on a clean light gray marble surface. The lighting is soft and directional, highlighting the glass texture of the watch face. The overall aesthetic is premium, professional, and corporate, featuring a clean blue accent in the background glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjs0ZHTLQI9k1PwkbeSGzRMC8uMEdfwzku1kAE0FCL339WatPaDugVc4yg1GEQgdxzKwgRuGqxR_pBlYl7L-fkTF3UwdoJRxDTjIGvU5QGnM2keW0kXLrVmsWa6Sd3cvOGJNyWOqUO6QHED1Vw2nm23yEQchApVql937HwDKOgEkFvQr-Wp1MZeEmpmv_uQtD7EIQ6h8K9ls15B1Co9gkTEhVkO6deCdm2S2wH31F8auV0UShCNpctF9Id7Fw2sPqqt0QvNOiH3zk"/>
+<div class="absolute top-2 left-2 flex gap-1">
+<span class="px-2 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold rounded uppercase">Hot</span>
+</div>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 backdrop-blur rounded-full text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-unit-md flex-1 flex flex-col">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-[12px] font-bold text-on-surface-variant">4.8 (120 reviews)</span>
+</div>
+<h3 class="font-label-md text-on-surface line-clamp-1 mb-2">Minimalist Zenith Smartwatch</h3>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="text-h3 font-bold text-primary">₹2,499</span>
+<span class="text-body-sm text-outline line-through ml-1">₹4,999</span>
+</div>
+<div class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded text-[11px] font-bold">50% OFF</div>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-outline text-[16px]">storefront</span>
+<span class="text-[11px] font-bold text-outline">Amazon</span>
+</div>
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg text-body-sm font-label-md hover:bg-primary-container transition-colors">View Deal</button>
+</div>
+</div>
+</div>
+<!-- Repeat Product Cards (Simulated) -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="relative aspect-square bg-surface-container-low overflow-hidden">
+<img alt="Headphones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional studio photograph of high-end wireless noise-canceling headphones in matte black, resting against a minimalist light blue textured background. The image is captured with high-key lighting that emphasizes the leather texture of the earcups and the sleek metallic headband. The atmosphere is modern, high-tech, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBowXNlD566RNzc-8sMKj9TJUFpcsTqNH9o7jUrCby7DQHykJ3EvXVIl3R_FZXutB9g1j2gJQreUNAzsaBsoepUMx7QFGibyDm5UyuuIsezbOSD6FrHGgVSceLTHEVqVQ-P-hswVzjgtyQHH6CxG8UkP9bvMierw3ee3Zo0rmI00-NpgNzgasRZB8yW9uxjqOXB0s_k_UTIygEOvfhBmlWgjU5z_knA-vSzsGUCmikaddMMK9O0-Xr8qnY6yMAHYkxukyLVoXSnFBk"/>
+<div class="absolute top-2 left-2 flex gap-1">
+<span class="px-2 py-1 bg-primary text-on-primary text-[10px] font-bold rounded uppercase">Trending</span>
+</div>
+</div>
+<div class="p-unit-md flex-1 flex flex-col">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-[12px] font-bold text-on-surface-variant">4.9 (850 reviews)</span>
+</div>
+<h3 class="font-label-md text-on-surface line-clamp-1 mb-2">SonicFlow Noise-Canceling Headphones</h3>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="text-h3 font-bold text-primary">₹8,999</span>
+<span class="text-body-sm text-outline line-through ml-1">₹12,999</span>
+</div>
+<div class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded text-[11px] font-bold">30% OFF</div>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-outline text-[16px]">storefront</span>
+<span class="text-[11px] font-bold text-outline">Flipkart</span>
+</div>
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg text-body-sm font-label-md hover:bg-primary-container transition-colors">View Deal</button>
+</div>
+</div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="relative aspect-square bg-surface-container-low overflow-hidden">
+<img alt="Shoes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A vibrant, dynamic shot of a red professional running shoe captured in mid-motion against a clean, white studio background. Sharp focus, high contrast, and energetic lighting that highlights the mesh texture and aerodynamic silhouette. The visual style is sporty yet polished, perfectly fitting a high-performance retail discovery platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFXx1ZGPFtRc85zutpCnBjBJlfdb5xlV3_q5QETubNTbNfoD--6ABx50A2Tl7z7SQ0oucvpORqtXo16LozftyVfSuXoi3M8h3CNavb-rnPV2dXV-Ozfus2REEEZlCguhf-XzdGo0jqP6fjcqY4FCLetiPwteopC8rvpLx_HnYgxNCxKt0p-uYat2uNZC8-UnZs_lrdjdhsei5fJe6CZX2cu9AHILiKSuVHfIhZlWejd9MnrfnMHe1wDPk_GPMbCydNUH9qVwwfHE8"/>
+</div>
+<div class="p-unit-md flex-1 flex flex-col">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-[12px] font-bold text-on-surface-variant">4.7 (50 reviews)</span>
+</div>
+<h3 class="font-label-md text-on-surface line-clamp-1 mb-2">AeroPace Performance Runners</h3>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="text-h3 font-bold text-primary">₹3,499</span>
+<span class="text-body-sm text-outline line-through ml-1">₹5,499</span>
+</div>
+<div class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded text-[11px] font-bold">36% OFF</div>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-outline text-[16px]">storefront</span>
+<span class="text-[11px] font-bold text-outline">Nike Store</span>
+</div>
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg text-body-sm font-label-md hover:bg-primary-container transition-colors">View Deal</button>
+</div>
+</div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="relative aspect-square bg-surface-container-low overflow-hidden">
+<img alt="Tablet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-resolution product image of a modern, ultra-slim tablet with a vibrant edge-to-edge display showing a colorful abstract wallpaper. The tablet is positioned diagonally in a bright, minimalist environment. The aesthetic is clean, professional, and data-driven, using soft shadows and precise focus to convey premium quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfoKDCbDVGTXqQusa6EP6e5btOH6O5Rxu5yMpRQb-Ls8CTujgdZE7-DpBrdqDEfdxYJ8x8lAZqk_B9lP1gywKGOcMLdIahjkJsmysBBChSnQiwYWHUvAc4fB6Lci-d6s2JQ2tuYS1WE2bwGDU50-JwvSEcBqPQcP1niA_3phWbaA2BlRo3qTuG4GzNzKAIx9vBbWVTQ7fOZU-GQjpv6m-mUhMWpcVfesLeyeJa66dE1qqjqiZOe1mL4xk-63-lp_18lwmw-wWrVsM"/>
+</div>
+<div class="p-unit-md flex-1 flex flex-col">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-[12px] font-bold text-on-surface-variant">4.9 (310 reviews)</span>
+</div>
+<h3 class="font-label-md text-on-surface line-clamp-1 mb-2">NexPad Ultra 12 Pro Tablet</h3>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="text-h3 font-bold text-primary">₹45,999</span>
+<span class="text-body-sm text-outline line-through ml-1">₹52,999</span>
+</div>
+<div class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded text-[11px] font-bold">13% OFF</div>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-outline text-[16px]">storefront</span>
+<span class="text-[11px] font-bold text-outline">Apple</span>
+</div>
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg text-body-sm font-label-md hover:bg-primary-container transition-colors">View Deal</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Responsive AdSense Banner -->
+<section class="max-w-container-max mx-auto px-gutter py-unit-lg">
+<div class="w-full h-32 bg-surface-container-low rounded-xl border-2 border-dashed border-outline-variant flex items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+<div class="text-center z-10">
+<code class="text-outline text-code uppercase tracking-widest block mb-2">Sponsored Content</code>
+<p class="text-on-surface-variant text-body-sm italic">Promote your brand here with high-converting display ads.</p>
+</div>
+</div>
+</section>
+<!-- Section 6: Best Deals Today (Horizontal Scrolling) -->
+<section class="py-unit-xl overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter mb-unit-lg flex justify-between items-end">
+<div>
+<h2 class="font-h2 text-h2">Best Deals Today</h2>
+<p class="text-on-surface-variant">Handpicked price drops and limited offers</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant rounded-full hover:bg-surface-container transition-colors" id="prevBtn"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-2 border border-outline-variant rounded-full hover:bg-surface-container transition-colors" id="nextBtn"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="flex gap-unit-lg overflow-x-auto px-gutter pb-6 hide-scrollbar snap-x snap-mandatory" id="dealsScroll">
+<!-- Deal Cards -->
+<div class="min-w-[300px] snap-start bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-md flex gap-unit-md items-center group cursor-pointer hover:shadow-lg transition-all">
+<div class="w-24 h-24 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img alt="Deal 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="A professional studio product shot of a luxury black laptop on a minimalist white desk. Soft daylight illumination, shallow depth of field, emphasizing the sleek thin profile and high-quality build. The mood is modern, efficient, and corporate, aligning with high-performance tech discovery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGPZgIxmqtI4ibMJrFTAy8spoEqPLlLxQjtJmigv27X75MZxRIENSi2i1fWvE4dLc1QMkNRnWtk4W8eaCv77dABpBsoZZAr2-3zhX7Yp4dz0ELM5lnY9JMnHHNJNxPaZ5jT8hoxUWH02LGp2WDxxJ0Nrz6aEibmf-oaxZ5XYLazIVoauScByLJFRS-OPTeIJPNQ9tYVPkzNtTVpAH83wrFWLRD41pkBzAy0zd1mZ09ovk8MJ4mixZSJIiT_l7JB4q7e0EhzvKHiks"/>
+</div>
+<div>
+<span class="text-error font-bold text-[10px] uppercase tracking-wider">Save 40%</span>
+<h4 class="font-label-md text-on-surface line-clamp-1">Pro UltraBook 14"</h4>
+<p class="text-h3 font-bold text-primary">₹54,990</p>
+<p class="text-body-sm text-outline">Ends in 05h 20m</p>
+</div>
+</div>
+<div class="min-w-[300px] snap-start bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-md flex gap-unit-md items-center group cursor-pointer hover:shadow-lg transition-all">
+<div class="w-24 h-24 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img alt="Deal 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="A macro studio shot of a sophisticated mechanical wristwatch with a tan leather strap. High-contrast lighting that highlights the intricate dial details and metallic reflections. Clean, bright aesthetic suitable for a high-end lifestyle product showcase." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxLvLYG68LGzMB3viFqoBO_Qk31teLosrnmz55cDaA3WI8ExTiM5atXHOrRjyc0lAjDHReFkcdh0-wT8zW4W_jk-zm-96gSqTAPPD8IqzjY_vlbTgddQK-NS5rV_mY3CKDFcxH9iFRrhNM61wRYIbgk_JIv5x28av1VbG8zSEHPBiDE9fgjpB4DgX5fgEuZc17VLQJQf3NcePiYGZPsg9VrcJzYxwMJL7DYINvensqKDLI7NSZlHjA1k4edUbwHQhxLL0KfIdLD0w"/>
+</div>
+<div>
+<span class="text-error font-bold text-[10px] uppercase tracking-wider">Lowest Price</span>
+<h4 class="font-label-md text-on-surface line-clamp-1">Classic Leather Chrono</h4>
+<p class="text-h3 font-bold text-primary">₹1,299</p>
+<p class="text-body-sm text-outline">Ends in 12h 45m</p>
+</div>
+</div>
+<div class="min-w-[300px] snap-start bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-md flex gap-unit-md items-center group cursor-pointer hover:shadow-lg transition-all">
+<div class="w-24 h-24 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img alt="Deal 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="A clean product shot of modern aviator sunglasses with a gold frame and dark lenses, resting on a white minimalist pedestal. High-key, bright lighting that creates soft shadows and highlights the premium materials. The look is stylish, sophisticated, and data-driven for professional discovery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXTOs_LcxXSzdfm7hlZMsYLlLdEoQQj1o9JmoZwxwr1jeEidMw7PIzeoZfy0GAwKOD91iBTJi8CVurX9exemNQsmw3kVMmgWIkDas-tyaqXpMTM_9TN2QLs3FEiyc4FKFO9gJReuNC8zy4PyctUSYOgmaZUQwCKJusBuFGWsdiMZvD0ii1kC1sD58YpzpzPrW0pIEn0pX2OiW505B6BlqgO8PS1WLNYXQPP-4yETR_Bp7pMP2QcY0rn6cNmWztkk27A0laMhM4nJA"/>
+</div>
+<div>
+<span class="text-error font-bold text-[10px] uppercase tracking-wider">Lightning Deal</span>
+<h4 class="font-label-md text-on-surface line-clamp-1">Gold Aviator Shades</h4>
+<p class="text-h3 font-bold text-primary">₹899</p>
+<p class="text-body-sm text-outline">Ends in 02h 10m</p>
+</div>
+</div>
+<div class="min-w-[300px] snap-start bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-md flex gap-unit-md items-center group cursor-pointer hover:shadow-lg transition-all">
+<div class="w-24 h-24 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img alt="Deal 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="A vintage-style modern instant camera in a soft pastel blue, shot in a bright studio against a neutral gray background. The lighting is soft and even, highlighting the rounded edges and mechanical lens details. The aesthetic is playful yet polished, perfect for a high-utility discovery feed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5ROifBDJ84cptbuQXONI_bY6QHr1Zi-C0FLWFzhorwDwkw5eqnZIsnnKaR_-ZahqfZCvYM638faFbuPI00kDNQQGgqRoPoBED45Z-ogTdS8LK5GO9CNBP-TZBoYGOe8MiRnRikv0_vQVbL0A3izV70-ysFpMS4z1eI1eu0VrVuaEagEWuqTd5kjK7SJsBBLQlVTvoTEH1FooNv8ZRnSXrWHOqhKjMWxKenwG5IUKiNtGz5TpfCK8djcJWTUsayE_hu9bkFUDbDdw"/>
+</div>
+<div>
+<span class="text-error font-bold text-[10px] uppercase tracking-wider">Save 25%</span>
+<h4 class="font-label-md text-on-surface line-clamp-1">Instant Mini 11 Camera</h4>
+<p class="text-h3 font-bold text-primary">₹4,999</p>
+<p class="text-body-sm text-outline">Ends in 08h 00m</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Featured Collections Grid (Bento Style) -->
+<section class="py-unit-xl max-w-container-max mx-auto px-gutter">
+<h2 class="font-h2 text-h2 mb-unit-lg">Curated Collections</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-unit-lg">
+<div class="md:col-span-2 group relative h-64 rounded-xl overflow-hidden cursor-pointer border border-outline-variant">
+<img alt="Gadgets Collection" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" data-alt="A collection of luxury smartphones and high-tech accessories artfully arranged on a minimalist dark surface with subtle blue glowing accents. The lighting is sophisticated and atmospheric, using rim lights to define the sleek metallic edges. The mood is high-end, futuristic, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIZoIw7GSCSqYoopIEnnQvAGEm7ymXqLVOEOSJA0NmboA3zNKnuh2F9gL5P-pnkdIznbe9YNrtsJ2g7SryH0bhafK90RXxF513ITpPxdRBgIv6ZwYS2xQnlVYwyI1lKP4c5FqVvah-ITHKvRIuUp5JBYpz99Dms-alHzUdN19YdzUZWWoVjLt8EGf4I-V7UOOZIeyNHs197B_7w45f9KupM_obZiWE69ladNyd9b1fUtVeQ7ppabQ9Dc5GGR5nX-tABfq_pryOOA4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-unit-lg flex flex-col justify-end">
+<span class="text-on-primary bg-primary w-fit px-3 py-1 rounded text-[10px] font-bold uppercase mb-2">Editor's Choice</span>
+<h3 class="text-h2 text-white font-bold">Tech Under ₹49,999</h3>
+<p class="text-white/80 font-body-sm">Premium gadgets that don't break the bank.</p>
+</div>
+</div>
+<div class="group relative h-64 rounded-xl overflow-hidden cursor-pointer border border-outline-variant">
+<img alt="Beauty Collection" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" data-alt="A bright and airy shot of premium skincare and beauty products arranged in a clean, clinical laboratory style. White and glass bottles with minimalist typography sit on a glossy surface with soft reflected light. The aesthetic is pure, professional, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYfD1UulHttM4zkNw-_GNXDHcj30Cn-g6kq_Vp--DGMduIrOdqrLCJjo3R0kW6MZO-Mpu96wZN0mTR1TGKAToWtj1irEMmlOJpNjSga0SGR0K2p8j89xlso2A6ihxPURWsHwI0149HGgP6fBkZ4DP1F5TNMowfws6NmNStpTaZ32D1GdlhZ57dG9oXuykqqeXKxe-8s80q_c4_izRoFZms9ENoecqTdsxWD6TE1T-tz-naQQj1lrd6a9q8_qmr6azXXtBMd6HdbP8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-unit-lg flex flex-col justify-end">
+<h3 class="text-h3 text-white font-bold">Best Under ₹499</h3>
+<p class="text-white/80 font-body-sm">Daily essentials at unbeatable prices.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 8: Latest Blog Articles -->
+<section class="py-unit-xl bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex justify-between items-center mb-unit-lg">
+<h2 class="font-h2 text-h2">Shopping Guides &amp; Tips</h2>
+<a class="text-primary font-label-md" href="#">Read All Stories</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-unit-lg">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden group cursor-pointer">
+<div class="h-48 overflow-hidden">
+<img alt="Blog 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A group of diverse young professionals working in a modern, sun-drenched co-working space. High-end laptops and architectural blueprints are on the desk. The lighting is warm and natural, creating an atmosphere of collaborative innovation and professional success. The style is bright and aspirational." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBln0p5laIIf3r6mP-JM3kwzfWTVgspeElS8VIYBbTqCm39y1pV32sKhsKp8TYXJPlXg62jNLFwDo-0MJKGxIxboNnReFPXu1aw_jTiCwiXNJBFgOpZnDjFRQpI3ihzgSg_HHYVtHfyzUheNnw6iYvFbxB7rl8dR3by6Ibr-jz8n5ZrdiQW5U00xSrl29SwAUshVFuwTLiD-lrh2CXX0xjen3dx0fsNGbPp0L41nAX056D5Xt9eLu5_SDa6voH8q0XrxmnP5hGchts"/>
+</div>
+<div class="p-unit-md space-y-2">
+<span class="text-primary text-[11px] font-bold uppercase">Buyer's Guide</span>
+<h3 class="font-h3 text-on-surface text-lg leading-snug group-hover:text-primary transition-colors">10 Things to Consider Before Buying a New Laptop in 2024</h3>
+<p class="text-on-surface-variant text-body-sm line-clamp-2">Our expert panel reviews the latest processing units and display technologies to help you choose the perfect machine.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden group cursor-pointer">
+<div class="h-48 overflow-hidden">
+<img alt="Blog 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A close-up shot of a smartphone screen displaying a secure checkout confirmation page with a large green checkmark. The environment is a brightly lit, high-end retail store with soft bokeh background. The image conveys trust, efficiency, and modern digital commerce." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7tLUPFZnREqwYRC4gpjcu44WKttgY7VUASHVwRExdmAFCFeUdxtKjN0TMHH_w80XfTxerxpz9FG0UsdqiD0RitM9i34VQE9Ii96EBJZmFYuL_fZSKhS2SJYW91KoxWMrujdAIGoyG6D3QMfd5oq9PF0V2KYgHgkbATndZiwh7ENZD9t9fNHo2rHf57zweSXMNr3mMuzI1nsyOg8vzvAy_IW9QOEEIldSaqsm8kbJO14ktZt2tOwBKAdq71tgWskjRi3h0DY5XbXI"/>
+</div>
+<div class="p-unit-md space-y-2">
+<span class="text-primary text-[11px] font-bold uppercase">Money Saving</span>
+<h3 class="font-h3 text-on-surface text-lg leading-snug group-hover:text-primary transition-colors">How to Stack Coupons and Get Maximum Discounts Online</h3>
+<p class="text-on-surface-variant text-body-sm line-clamp-2">Unlock the secrets of digital couponing and seasonal sales cycles with our comprehensive guide.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden group cursor-pointer">
+<div class="h-48 overflow-hidden">
+<img alt="Blog 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A top-down view of a modern tech-focused workspace featuring high-resolution monitors, a mechanical keyboard, and various coding journals. The lighting is cool-toned and professional, focusing on the interface on the screen. The aesthetic is clean, data-driven, and highly technical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdb-L3NrcjnzhFD6mp8c-DR_PwvfI95VdKxsqOyPOB4nJopXKTc0B6h5o3lMzYNj-aR-0zYCTRqzCBl6s18qWPBH1Ndj0g1Hea9KPIgjZ46XvxHVRtITWE87KVzKEQNjH_g0clJopSHbCrrzAJ2LAyTgi7Qv6TFYvlvwGdod1dxcIi8upE12n0xr5uIWByIdktUAoUozUcp3uf9HKz2CKjeVg3e24Mqw3XXMEEqaEwOUBi3qdE14ibzveu-AbdGqtVbrUoD5Kzfm4"/>
+</div>
+<div class="p-unit-md space-y-2">
+<span class="text-primary text-[11px] font-bold uppercase">Trend Report</span>
+<h3 class="font-h3 text-on-surface text-lg leading-snug group-hover:text-primary transition-colors">The Rise of Smart Home Tech: What's Worth the Hype?</h3>
+<p class="text-on-surface-variant text-body-sm line-clamp-2">We separate the essential smart devices from the gimmicks in this year's home automation roundup.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 9: Newsletter Subscription -->
+<section class="py-unit-xl bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-gutter text-center space-y-unit-lg">
+<div class="space-y-unit-sm">
+<h2 class="font-h2 text-h2">Never Miss a Price Drop Again</h2>
+<p class="text-primary-fixed max-w-xl mx-auto font-body-lg">Get curated lists of the day's best deals delivered directly to your inbox every morning. Join 50,000+ smart shoppers.</p>
+</div>
+<form class="max-w-md mx-auto flex flex-col md:flex-row gap-unit-sm">
+<input class="flex-1 h-12 px-4 rounded-xl text-on-surface focus:ring-2 focus:ring-on-primary outline-none" placeholder="Your email address" type="email"/>
+<button class="h-12 px-8 bg-on-surface text-white rounded-xl font-label-md hover:bg-secondary transition-all" type="submit">Subscribe Now</button>
+</form>
+<p class="text-primary-fixed text-body-sm">Zero spam. Unsubscribe at any time. View our <a class="underline" href="#">Privacy Policy</a>.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant w-full mt-unit-xl">
+<div class="w-full px-gutter py-unit-xl max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-unit-lg">
+<div class="col-span-2">
+<a class="text-h3 font-h3 text-primary font-bold mb-unit-sm block" href="#">AffiliatePro</a>
+<p class="text-on-surface-variant text-body-sm max-w-xs mb-unit-lg">AffiliatePro is your ultimate companion for smart shopping. We simplify product discovery through data-driven research and real-time deal tracking.</p>
+<div class="flex gap-unit-md">
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-unit-md">Products</h4>
+<ul class="space-y-unit-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Browse All</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Trending Deals</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Price Tracker</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Coupons</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-unit-md">Categories</h4>
+<ul class="space-y-unit-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Electronics</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Fashion</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Home &amp; Living</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Health &amp; Beauty</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-unit-md">Company</h4>
+<ul class="space-y-unit-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Partnerships</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-unit-md">Support</h4>
+<ul class="space-y-unit-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-unit-md border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-unit-md">
+<p class="text-body-sm text-on-surface-variant text-center md:text-left">
+                © 2024 AffiliatePro Discovery. All rights reserved. Affiliate Disclosure: We may earn commissions from qualifying purchases.
+            </p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center py-unit-sm bg-surface-container border-t border-outline-variant shadow-lg lg:hidden z-50">
+<a class="flex flex-col items-center justify-center text-primary font-bold transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-md-mobile font-label-md-mobile">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-label-md-mobile font-label-md-mobile">Categories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined">sell</span>
+<span class="text-label-md-mobile font-label-md-mobile">Deals</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-label-md-mobile font-label-md-mobile">Wishlist</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-md-mobile font-label-md-mobile">Profile</span>
+</a>
+</nav>
+<script>
+        // Horizontal scroll controls
+        const scrollContainer = document.getElementById('dealsScroll');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+
+        nextBtn.addEventListener('click', () => {
+            scrollContainer.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            scrollContainer.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+
+        // Simple Fade In Intersection Observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

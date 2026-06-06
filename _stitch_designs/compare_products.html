@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AffiliatePro | Product Comparison</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#dae2fd",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "tertiary": "#943700",
+                    "on-secondary-container": "#5c647a",
+                    "secondary": "#565e74",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "surface-container-high": "#e7e7f3",
+                    "primary": "#004ac6",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#bc4800",
+                    "outline-variant": "#c3c6d7",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "on-surface": "#191b23",
+                    "surface-container": "#ededf9",
+                    "on-background": "#191b23",
+                    "surface-container-low": "#f3f3fe",
+                    "on-tertiary-fixed": "#360f00",
+                    "primary-container": "#2563eb",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-container-highest": "#e1e2ed",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "outline": "#737686",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e1e2ed",
+                    "on-secondary-fixed": "#131b2e",
+                    "background": "#faf8ff",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#d9d9e5",
+                    "on-tertiary-container": "#ffede6",
+                    "inverse-on-surface": "#f0f0fb",
+                    "on-primary-fixed": "#00174b",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "inverse-primary": "#b4c5ff",
+                    "on-surface-variant": "#434655",
+                    "on-primary-container": "#eeefff",
+                    "surface-bright": "#faf8ff",
+                    "surface-tint": "#0053db",
+                    "primary-fixed": "#dbe1ff",
+                    "inverse-surface": "#2e3039",
+                    "surface": "#faf8ff",
+                    "tertiary-fixed": "#ffdbcd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit-xs": "4px",
+                    "gutter": "24px",
+                    "unit-xl": "48px",
+                    "unit-sm": "8px",
+                    "unit-md": "16px",
+                    "margin-mobile": "16px",
+                    "unit-lg": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "h1-mobile": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "h1": ["Plus Jakarta Sans"],
+                    "h2": ["Plus Jakarta Sans"],
+                    "code": ["Inter"],
+                    "h3": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h1-mobile": ["30px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "code": ["13px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .comparison-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        .comparison-scroll::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .comparison-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .sticky-column {
+            position: sticky;
+            left: 0;
+            z-index: 20;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-unit-xl">
+<div class="text-h3 font-h3 font-bold text-primary dark:text-primary-fixed-dim">AffiliatePro</div>
+<nav class="hidden md:flex items-center gap-unit-lg">
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Deals</a>
+<a class="text-label-md font-label-md text-primary dark:text-primary-fixed border-b-2 border-primary pb-1" href="#">Trending</a>
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Categories</a>
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Blog</a>
+</nav>
+<div class="flex items-center gap-unit-md">
+<button class="material-symbols-outlined text-primary" data-icon="dark_mode">dark_mode</button>
+<button class="material-symbols-outlined text-primary md:hidden" data-icon="menu">menu</button>
+<div class="hidden md:block relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary outline-none text-body-sm w-64" placeholder="Search products..." type="text"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-gutter py-unit-xl">
+<!-- Header Section -->
+<section class="mb-unit-xl">
+<h1 class="text-h1 font-h1 text-on-surface mb-unit-sm">Product Comparison</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-3xl">Analyze the top-performing affiliate products side-by-side. Our data-driven comparison focuses on performance metrics, commission rates, and real-world utility.</p>
+</section>
+<!-- Comparison Tool -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto comparison-scroll">
+<table class="w-full border-collapse min-w-[1000px]">
+<thead>
+<tr>
+<!-- Empty top-left cell -->
+<th class="sticky-column bg-surface-container-low p-unit-lg border-b border-r border-outline-variant w-[240px] text-left">
+<span class="text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">Specifications</span>
+</th>
+<!-- Product 1 -->
+<th class="p-unit-lg border-b border-outline-variant bg-white min-w-[240px]">
+<div class="flex flex-col items-center gap-unit-md">
+<div class="w-full aspect-square bg-surface-container rounded-lg overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A professional studio product shot of a high-end ergonomic mechanical keyboard with subtle RGB backlighting. The lighting is crisp and clean, reflecting a modern corporate office aesthetic. The color palette is dominated by deep grays, blues, and stark whites, conveying a sense of premium build quality and engineering precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj1fTlIcIMoOVzRBl_c8DsVdYhlClUXS2pUMrRF3XK4LtVsauFd7YTiT3FbrGvz8ximWaiaUsvMNV1u21Pe7wWZopb7Jo-pR4genryZlyNgyRadHwNsKhglwNS6zQJ0PMAvcAaMp-_0FaO_po2F5mk0nFupcc2MqVU8T2-NYXuQPT-yX_57wCZ0cFhRMZ_Gu1QJyAHAidDekfChEuq5OSlIt0aZ_ENw98o1CIw-rFSWJtqUnvgiBdOCcwbrBKgyyj95iVph3-7wRY"/>
+</div>
+<h3 class="text-h3 font-h3 text-on-surface">ProStream K9</h3>
+</div>
+</th>
+<!-- Product 2 -->
+<th class="p-unit-lg border-b border-outline-variant bg-white min-w-[240px]">
+<div class="flex flex-col items-center gap-unit-md">
+<div class="w-full aspect-square bg-surface-container rounded-lg overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A sleek, minimalist wireless professional mouse resting on a textured leather desk mat. The lighting is soft and diffused, creating a high-end tech lifestyle mood. The overall aesthetic is professional and data-driven, using a monochromatic color scheme with royal blue accents to emphasize the cutting-edge technology and design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYBitS-ucn2kHWgNlbBgTdeR7ZtReGdiM-FnUtsTKXNcWlnjuUXZyg2bfXHxl34Erznt0GKsRblAL5TDWWNPGvYb8Q-8sTcwwBYgr0_pxkT_sdOjM5iVJC77k2O_uVC9us7ZSfbFgw4_3qq3mFsLCkgvQBJAHtsZ6rH_-3IF-c4-dNbrcvDFUGb-9_4yAZ2VIg-TbCtPILlF56feMX7b4v0jhBWXx_42WxJ-rqqOMRI1VSVhGp2nEuCohszN_ijHH6I2xOnCiDvUA"/>
+</div>
+<h3 class="text-h3 font-h3 text-on-surface">EliteClick X</h3>
+</div>
+</th>
+<!-- Product 3 -->
+<th class="p-unit-lg border-b border-outline-variant bg-white min-w-[240px]">
+<div class="flex flex-col items-center gap-unit-md">
+<div class="w-full aspect-square bg-surface-container rounded-lg overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A pair of premium noise-canceling headphones displayed in a brightly lit, modern architectural setting. The style is ultra-modern and clinical, featuring polished surfaces and sharp lines. The color palette utilizes shades of light gray and blue, highlighting the product's sophisticated electronics and luxury materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5-PfEaoS9I6amMmLN7mXe66KcSQZevBsrw3igtCd1LhD-_Nz5louF7I3Z9iv9WLW7Q2l67yIk7OPXVDXDlqh0L_GZm6-hovhQw-bXWGJmswJinKmds_ySZ_r_FZj6sCPfK4fgzX4_kaUSh3rHdnTeYOPvkaSBqzSQteyk5MPqrVIUlaIv92WxBl9smC1l75i8W_jsQbgBehUJwAjW0RAY2493isiNof1HQLyxCgVR7J3yqNZouOOzpRRS2VDmEk3ylE-0dbHwphw"/>
+</div>
+<h3 class="text-h3 font-h3 text-on-surface">AudioPure Pro</h3>
+</div>
+</th>
+<!-- Product 4 -->
+<th class="p-unit-lg border-b border-outline-variant bg-white min-w-[240px]">
+<div class="flex flex-col items-center gap-unit-md">
+<div class="w-full aspect-square bg-surface-container rounded-lg overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A high-performance dual-monitor setup showing data analytics dashboards in a clean, minimalist workspace. The scene is illuminated by natural light from a nearby window, creating an airy and efficient atmosphere. The aesthetic is professional and corporate, focusing on productivity through a palette of blues, whites, and dark accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFPcccKPUCLzaGqI06xbIJoGfhWZSRLH3dtaphLWPnsQmkYSOBcOuITOPh2FWrKGgFGwKwEcVvWYUhaTXs_2vLvgd8B7wyhjUSBeHMnCf1wGXcT9gc_A2lQaI1JqHYNTksuYC98Rdtn2AEWbRVN5DqeELqbt87hKu8I1kc-F8thMqcodw9n1hg81-ujD8KAT4YC3xvh8JmBEL86t8TKIF9ACr4rgESidujuGibCsmLsrYSXzxGTw4puVtJKV3MsT3rzo8S6PD2sKw"/>
+</div>
+<h3 class="text-h3 font-h3 text-on-surface">VisionStack 4K</h3>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<!-- Row: Price -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="sticky-column bg-surface-container-low p-unit-md border-b border-r border-outline-variant">
+<div class="flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-outline" data-icon="payments">payments</span>
+<span class="text-label-md font-label-md text-on-surface">Price</span>
+</div>
+</td>
+<td class="p-unit-md border-b border-outline-variant text-center">
+<span class="text-h3 font-h3 text-primary">$189.00</span>
+</td>
+<td class="p-unit-md border-b border-outline-variant text-center">
+<span class="text-h3 font-h3 text-primary">$124.50</span>
+</td>
+<td class="p-unit-md border-b border-outline-variant text-center">
+<span class="text-h3 font-h3 text-primary">$299.99</span>
+</td>
+<td class="p-unit-md border-b border-outline-variant text-center">
+<span class="text-h3 font-h3 text-primary">$450.00</span>
+</td>
+</tr>
+<!-- Row: Rating -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="sticky-column bg-surface-container-low p-unit-md border-b border-r border-outline-variant">
+<div class="flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-outline" data-icon="star">star</span>
+<span class="text-label-md font-label-md text-on-surface">Rating</span>
+</div>
+</td>
+<td class="p-unit-md border-b border-outline-variant text-center">
+<div class="flex items-center justify-center gap-1">
+<span class="text-label-md font-label-md text-on-surface">4.8</span>
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-body-sm text-outline">(2.1k)</span>
+</div>
+</td>
+<td class="p-unit-md border-b border-outline-variant text-center">
+<div class="flex items-center justify-center gap-1">
+<span class="text-label-md font-label-md text-on-surface">4.5</span>
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-body-sm text-outline">(850)</span>
+</div>
+</td>
+<td class="p-unit-md border-b border-outline-variant text-center">
+<div class="flex items-center justify-center gap-1">
+<span class="text-label-md font-label-md text-on-surface">4.9</span>
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-body-sm text-outline">(1.2k)</span>
+</div>
+</td>
+<td class="p-unit-md border-b border-outline-variant text-center">
+<div class="flex items-center justify-center gap-1">
+<span class="text-label-md font-label-md text-on-surface">4.7</span>
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-body-sm text-outline">(430)</span>
+</div>
+</td>
+</tr>
+<!-- Row: Stock -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="sticky-column bg-surface-container-low p-unit-md border-b border-r border-outline-variant">
+<div class="flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-outline" data-icon="inventory_2">inventory_2</span>
+<span class="text-label-md font-label-md text-on-surface">Stock</span>
+</div>
+</td>
+<td class="p-unit-md border-b border-outline-variant text-center">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-body-sm rounded-full font-medium">In Stock</span>
+</td>
+<td class="p-unit-md border-b border-outline-variant text-center">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-body-sm rounded-full font-medium">In Stock</span>
+</td>
+<td class="p-unit-md border-b border-outline-variant text-center">
+<span class="px-3 py-1 bg-error-container text-on-error-container text-body-sm rounded-full font-medium">Low Stock</span>
+</td>
+<td class="p-unit-md border-b border-outline-variant text-center">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-body-sm rounded-full font-medium">In Stock</span>
+</td>
+</tr>
+<!-- Row: Key Features -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="sticky-column bg-surface-container-low p-unit-md border-b border-r border-outline-variant align-top">
+<div class="flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-outline" data-icon="list">list</span>
+<span class="text-label-md font-label-md text-on-surface">Key Features</span>
+</div>
+</td>
+<td class="p-unit-md border-b border-outline-variant align-top">
+<ul class="text-body-sm text-on-surface-variant space-y-2 list-none text-left">
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> Hot-swappable</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> PBT Keycaps</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> 8K Polling</li>
+</ul>
+</td>
+<td class="p-unit-md border-b border-outline-variant align-top">
+<ul class="text-body-sm text-on-surface-variant space-y-2 list-none text-left">
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> 65g Ultra-light</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> 200h Battery</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> Optical Switches</li>
+</ul>
+</td>
+<td class="p-unit-md border-b border-outline-variant align-top">
+<ul class="text-body-sm text-on-surface-variant space-y-2 list-none text-left">
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> 45dB Reduction</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> Lossless Audio</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> Multi-device Sync</li>
+</ul>
+</td>
+<td class="p-unit-md border-b border-outline-variant align-top">
+<ul class="text-body-sm text-on-surface-variant space-y-2 list-none text-left">
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> 144Hz Refresh</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> HDR10 Support</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span> USB-C Power Del.</li>
+</ul>
+</td>
+</tr>
+<!-- Row: Action Buttons -->
+<tr>
+<td class="sticky-column bg-surface-container-low p-unit-md border-r border-outline-variant"></td>
+<td class="p-unit-lg text-center bg-white">
+<button class="w-full py-3 bg-primary text-on-primary font-label-md rounded-xl shadow-sm hover:scale-[1.02] transition-transform active:scale-95 flex items-center justify-center gap-2">
+                                    View Deal <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</button>
+</td>
+<td class="p-unit-lg text-center bg-white">
+<button class="w-full py-3 bg-primary text-on-primary font-label-md rounded-xl shadow-sm hover:scale-[1.02] transition-transform active:scale-95 flex items-center justify-center gap-2">
+                                    View Deal <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</button>
+</td>
+<td class="p-unit-lg text-center bg-white">
+<button class="w-full py-3 bg-primary text-on-primary font-label-md rounded-xl shadow-sm hover:scale-[1.02] transition-transform active:scale-95 flex items-center justify-center gap-2">
+                                    View Deal <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</button>
+</td>
+<td class="p-unit-lg text-center bg-white">
+<button class="w-full py-3 bg-primary text-on-primary font-label-md rounded-xl shadow-sm hover:scale-[1.02] transition-transform active:scale-95 flex items-center justify-center gap-2">
+                                    View Deal <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- AdSense Native Placeholder -->
+<div class="mt-unit-xl bg-surface-container-low border-2 border-dashed border-outline-variant rounded-xl p-unit-xl flex flex-items-center justify-center">
+<div class="text-center">
+<p class="font-code text-code text-outline uppercase tracking-widest mb-2">Sponsored Content</p>
+<p class="text-body-sm text-on-surface-variant">Recommended based on your comparison history.</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant dark:border-outline w-full mt-unit-xl">
+<div class="w-full px-gutter py-unit-xl max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-unit-lg">
+<div class="col-span-2">
+<div class="text-h3 font-h3 text-primary mb-unit-md">AffiliatePro</div>
+<p class="text-body-sm text-on-surface-variant max-w-xs">Helping professionals make data-backed purchasing decisions with real-time performance analytics.</p>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-on-surface mb-unit-md">Products</h4>
+<ul class="space-y-unit-sm">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Categories</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Trending Deals</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-on-surface mb-unit-md">Company</h4>
+<ul class="space-y-unit-sm">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">About</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-on-surface mb-unit-md">Policies</h4>
+<ul class="space-y-unit-sm">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Affiliate Disclosure</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-on-surface mb-unit-md">Support</h4>
+<ul class="space-y-unit-sm">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">FAQs</a></li>
+</ul>
+</div>
+</div>
+<div class="w-full px-gutter py-unit-md border-t border-outline-variant max-w-container-max mx-auto">
+<p class="text-body-sm text-on-surface-variant text-center md:text-left">
+                © 2024 AffiliatePro Discovery. All rights reserved. Affiliate Disclosure: We may earn commissions from qualifying purchases.
+            </p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center py-unit-sm bg-surface-container dark:bg-inverse-surface shadow-lg border-t border-outline-variant z-50 lg:hidden">
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-label-md-mobile font-label-md-mobile">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="text-label-md-mobile font-label-md-mobile">Categories</span>
+</div>
+<div class="flex flex-col items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined" data-icon="sell" style="font-variation-settings: 'FILL' 1;">sell</span>
+<span class="text-label-md-mobile font-label-md-mobile">Deals</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="text-label-md-mobile font-label-md-mobile">Wishlist</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-label-md-mobile font-label-md-mobile">Profile</span>
+</div>
+</nav>
+<script>
+        // Micro-interaction: Scroll reveal for comparison rows
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableRows = document.querySelectorAll('tbody tr');
+            tableRows.forEach((row, index) => {
+                row.style.opacity = '0';
+                row.style.transform = 'translateY(10px)';
+                row.style.transition = `all 0.4s ease-out ${index * 0.1}s`;
+                
+                setTimeout(() => {
+                    row.style.opacity = '1';
+                    row.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        });
+    </script>
+</body></html>
